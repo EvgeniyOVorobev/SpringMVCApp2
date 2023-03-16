@@ -1,2 +1,12 @@
-package com.ev.springMVC;public class MyController {
+package com.ev.springMVC;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class MyController {
+    @GetMapping("/hello")
+    public String sayHello(){
+        return "hello_world";
+    }
 }
